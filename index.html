@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Formularz</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="shortcut icon" href="img/favicon-21.ico"/>
+</head>
+<body>
+  <div class="header">
+    <img class="header__logo" src="img/logo.svg" alt="avsystem logo"/>
+  </div>
+  <div class="container">
+    <form class="form" method="post" action="/request">
+      <div class="form__group">
+        <label class="form__group__label" for="name">Imię i nazwisko:</label>
+        <input class="form__group__input" type="text" id="name" name="name" required/>
+      </div>
+      <div class="form__group">
+        <label class="form__group__label" for="email">Email:</label>
+        <input class="form__group__input" type="email" id="email" name="email" required/>
+      </div>
+      <div class="form__group">
+        <label class="form__group__label" for="number">Wiek:</label>
+        <input class="form__group__input form__group__input--number" type="number" id="number" name="number" required/>
+      </div>
+      <div class="form__group">
+        <label class="form__group__label">Płeć:</label>
+        <label class="form__group__label form__group__label--radio"><input class="form__group__radio" type="radio" name="sex" id="sex-male" value="M"/><span class="form__group__radio--checked"></span> Mężczyzna</label>
+        <label class="form__group__label form__group__label--radio"><input class="form__group__radio" type="radio" name="sex" id="sex-female" value="F"/><span class="form__group__radio--checked"></span> Kobieta</label>
+      </div>
+      <div class="form__group form__group--education">
+        <label class="form__group__label" for="education">Wykształcenie:</label>
+        <select class="form__group__select" name="education" id="education">
+          <option value="lower">Podstawowe</option>
+          <option value="middle">Średnie</option>
+          <option value="higher">Wyższe</option>
+        </select>
+      </div>
+      <div class="form__group form__group--multiplay">
+        <label class="form__group__label" for="hobby">Zainteresowania:</label>
+        <select class="form__group__select form__group__select--multiplay" name="hobby" id="hobby" multiple>
+          <option class="form__group__select__option" value="music">Muzyka</option>
+          <option class="form__group__select__option" value="film">Film</option>
+          <option class="form__group__select__option" value="movie">Kino</option>
+          <option class="form__group__select__option" value="money">Pieniądze</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label class="form__group__label form__group__label--checkbox">
+          <input class="form__group__input" type="checkbox" name="legal-action" value="legal-action" id="legal-action"/><span class="form__group__checkbox--checked"></span> Zgadzam się na Rodo i zrzeczenie majątku.
+        </label>
+      </div>
+      <div class="form__group">
+        <button class="form__submit" type="submit">Wyślij</button>
+      </div>
+    </form>
+  </div>
+  <div class="message"></div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

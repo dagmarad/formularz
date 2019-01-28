@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/'Roboto-Regular.woff2') format('woff2'),
+  url('../fonts/Roboto-Regular.woff') format('woff'),
+  url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+  url('../fonts/Roboto-Bold.woff') format('woff'),
+  url('../fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: 'Roboto';
+}
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.header {
+  height: 65px;
+  margin-bottom: 50px;
+  background: #00001e url(../img/background.png);
+  background-size: cover;
+  color: #ffffff;
+}
+.header__logo {
+  height: 45px;
+  padding: 10px 0 0 10px;
+}
+.form {
+  max-width: 500px;
+  padding: 0 20px 50px 20px;
+}
+.form__group {
+  margin-bottom: 20px;
+}
+.form__group__input,
+.form__group__select {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ededed;
+  box-sizing: border-box;
+  padding-left: 5px;
+  line-height: 43px;
+  transition: 0.3s;
+}
+.form__group__input:focus {
+  box-shadow: 0 4px 0 #ffd600;
+  outline: none;
+}
+.form__group__select:focus {
+    outline: none;
+    box-shadow: 0 4px 0 #ffd600;
+}
+.form__group__label--checkbox {
+  height: auto;
+  width: auto;
+}
+.form__group__input--number {
+  -moz-appearance: textfield;
+}
+.form__group__label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: bold;
+}
+.form__group__select--multiplay {
+  height: 70px;
+}
+.form__group--education {
+  position: relative;
+}
+.form__group--education:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  border-top: 5px solid #666666;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transform: translateY(-50%);
+}
+.form__group__select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form__group__select::-ms-expand {
+  display:none;
+}
+.form__group--multiplay {
+  overflow: hidden;
+  padding-bottom: 4px;
+}
+.form__group__select--multiplay {
+  width: 200%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border-right: 0;
+  background: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form__group__select__option {
+  display: block;
+  width: calc(50% + 7px);
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-left: 5px;
+  border-right: 1px solid #dedede;
+}
+.form__group__label--checkbox {
+  padding-left: 0;
+  font-size: 12px;
+}
+.form__group__label--checkbox .form__group__input {
+  display: none;
+}
+.form__group__radio {
+  display: none;
+}
+.form__group__label--radio {
+  display: inline-block;
+  margin-right: 20px;
+}
+.form__group__radio--checked,
+.form__group__checkbox--checked {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  border: 1px solid #bfbfbf;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.form__group__checkbox--checked {
+  border-radius: 0;
+}
+.form__group__radio--checked:before,
+.form__group__checkbox--checked:before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.form__group__checkbox--checked:before {
+  top: 11px;
+}
+.form__group__radio:checked+.form__group__radio--checked:before {
+  content: '';
+  display: block;
+  height: 12px;
+  width: 12px;
+  background-color: #ffd600;
+  border-radius: 50%;
+}
+.form__group__input:checked+.form__group__checkbox--checked:before {
+  content: url(../img/tick.png);
+}
+.form__submit {
+  height: 60px;
+  width: 180px;
+  background-color: #ffffff;
+  border: 2px solid #ffd600;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.form__submit:hover {
+  background-color: #ffd600;
+}
+.message {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 20px;
+  bottom: -100px;
+  height: 40px;
+  min-width: 200px;
+  padding: 10px 20px;
+  border-left: 5px solid #323232;
+  color: #ffffff;
+  background-color: #323232;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  transition: 1s;
+}
+.message--error {
+  bottom: 20px;
+  border-left: 5px solid red;
+}
+.message--success{
+  bottom: 20px;
+  border-left: 5px solid green;
+}
