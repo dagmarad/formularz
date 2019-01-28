@@ -1,3 +1,3 @@
 # formularz
 Symulacja prostego formularza kontaktowego
-formularz powinien być wysłany przez AJAX/XMLHttpRequest pod url "/request" metodą POST w formie zserializowanej. W przypadku success powinien pojawić się popup z wiadomością "Zgłoszenie przyjęte" a następnie po 2 sekundach zniknąć a formularz powinien zostać wyczyszczony. W przypadku failure powinien zostać wyświetlony w konsoli błąd, który wrócił z serwera oraz popup z wiadomością "Wystąpił błąd, spróbuj ponownie" który po 2 sekundach zniknie. W momencie wywołania akcji wysyłania, przycisk "send" powinien zostać zablokowany i odblokowany dopiero po success albo failure.
+
